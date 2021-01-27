@@ -28,8 +28,9 @@ $(document).ready(function(){
   let newDice = new Dice();
   $('button#roll').on('click', function(){
     $('ul#score-1').append('<li>' + newDice.rollDice() + '</li>');
-    console.log("This is running")
+    $('ul#score-2').append('<li>' + newDice.rollDice() + '</li>');
   });
+
 });
 
 
