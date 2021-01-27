@@ -23,14 +23,25 @@ Dice.prototype.rollDice = function() {
 
 
 
-
 $(document).ready(function(){
   let newDice = new Dice();
-  $('button#roll').on('click', function(){
-    $('ul#score-1').append('<li>' + newDice.rollDice() + '</li>');
-    $('ul#score-2').append('<li>' + newDice.rollDice() + '</li>');
+  let total1 = 0;
+  let total2 = 0;
+  $('button#roll-1').on('click', function(){
+    let rollOne = newDice.rollDice();
+    $('ul#score-1').append('<li>' + rollOne + '</li>');
+    if(rollOne != 1){
+      total1 += rollOne;
+      $('div#total-1').text(total1);
+    }
   });
 
+  $('button#roll-2').on('click', function(){
+    let rollTwo = newDice.rollDice();
+    $('ul#score-2').append('<li>' + rollTwo + '</li>');
+    total2 += rollTwo;
+    $('div#total-2').text(total2);
+  });
 });
 
 
