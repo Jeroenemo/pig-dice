@@ -29,6 +29,8 @@ $(document).ready(function(){
   let player2 = new Player("Player 2");
   let total1 = 0;
   let total2 = 0;
+  $('div#total-1').text(0);
+  $('div#total-2').text(0);
   $('button#roll-1').on('click', function(){
     let rollOne = newDice.rollDice();
     $('div#score-1').text(rollOne);
@@ -56,9 +58,9 @@ $(document).ready(function(){
     }
   });
   $('button#hold-1').on('click', function(){
-    
     player1.totalBank += total1;
       if(total1 != 0){
+        document.getElementById('bank-output-1').innerHTML = player1.totalBank;
         document.getElementById('flip-card').classList.toggle('do-flip');
         total1 = 0;
         $('div#total-1').text(0);
@@ -68,9 +70,9 @@ $(document).ready(function(){
       console.log(player1)
   });
   $('button#hold-2').on('click', function(){
-    
     player2.totalBank += total2;
     if(total2 != 0){
+      document.getElementById('bank-output-2').innerHTML = player2.totalBank;
       document.getElementById('flip-card').classList.toggle('do-flip');
       total2 = 0;
       $('div#total-2').text(0);

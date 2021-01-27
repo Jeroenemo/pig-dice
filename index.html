@@ -12,24 +12,38 @@
 <body>
   <div class='container'>
     <h1 class="text-center">Pig Dice Game</h1>
+
     <div class="win-hide">
       <p class="text-center">Welcome to our game! This is a game of pig dice, press the button to roll the dice</p>
     </div>
     <div class="win-hide">
+      <div class="row">
+        <div class="col-md-4 offset-md-3">
+          <div id="bank-1">
+            <p>Player 1 bank: <span id="bank-output-1">0</span></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div id="bank-2">
+            <p>Player 2 bank: <span id="bank-output-2">0</span></p>
+          </div>
+        </div>
+      </div>
       <div id="flip-card">
         <div class="flip-card-front">
           <div id="output-1">
+            <div id="total-1"></div>
             <button type="button" class="btn btn-info" id="roll-1">Player 1 Roll!</button>
             <button type="button" class="btn btn-success" id="hold-1">Hold!</button>
-            <div id="total-1"></div>
+            
             <div id="score-1"></div>
           </div>
         </div>
         <div class="flip-card-back">
           <div id="output-2">
+            <div id="total-2"></div>
             <button type="button" class="btn btn-info" id="roll-2">Player 2 Roll!</button>
             <button type="button" class="btn btn-success" id="hold-2">Hold!</button>
-            <div id="total-2"></div>
             <div id="score-2"></div>
           </div>
         </div>
