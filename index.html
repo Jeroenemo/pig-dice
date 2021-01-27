@@ -12,31 +12,33 @@
   <body>
     <div class='container'>
       <h1 class="text-center">Pig Dice Game</h1>
-      <div class="row">
+      <div class="row win-hide">
         <div class="col-md-4 offset-md-4">
           <p class="text-center">Welcome to our game! This is a game of pig dice, press the button to roll the dice</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-2 offset-md-6">
-          <button type="button" class="btn btn-info" id="roll-1">Player 1 Roll!</button>
-          <button type="button" class="btn btn-info" id="roll-2">Player 2 Roll!</button>
-          <button type="button" class="btn btn-success" id="hold-1">Hold!</button>
-          <button type="button" class="btn btn-success" id="hold-2">Hold!</button>
-        </div>
+      <div class="row win-hide">
+        
         <div id="output-1">
+          <button type="button" class="btn btn-info" id="roll-1">Player 1 Roll!</button>
+          <button type="button" class="btn btn-success" id="hold-1">Hold!</button>
           <div id="total-1"></div>
-          <ul id="score-1">
+          <div id="score-1">
   
-          </ul>
-
-          
+          </div>
         </div>
         <div id="output-2">
+          <button type="button" class="btn btn-info" id="roll-2">Player 2 Roll!</button>
+          <button type="button" class="btn btn-success" id="hold-2">Hold!</button>
           <div id="total-2"></div>
-          <ul id="score-2">
+          <div id="score-2">
   
-          </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="winner-output">
+
         </div>
       </div>
     </div>
