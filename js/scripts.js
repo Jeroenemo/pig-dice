@@ -36,12 +36,10 @@ $(document).ready(function(){
       total1 += rollOne;
       $('div#total-1').text(total1);
     } else {
-      alert("You rolled a 1. Lose everything!");
+      document.getElementById('flip-card').classList.toggle('do-flip');
       $('div#total-1').text(0);
       $("div#score-1").text('');
       total1 = 0;
-      $('div#output-1').hide();
-      $('div#output-2').show();
     }
   });
   $('button#roll-2').on('click', function(){
@@ -51,19 +49,17 @@ $(document).ready(function(){
       total2 += rollTwo;
       $('div#total-2').text(total2);
     } else {
-      alert("You rolled a 1. Lose everything!");
+      document.getElementById('flip-card').classList.toggle('do-flip');
       $('div#total-2').text(0);
       $('div#score-2').text('');
       total2 = 0;
-      $('div#output-2').hide();
-      $('div#output-1').show();
     }
   });
   $('button#hold-1').on('click', function(){
+    
     player1.totalBank += total1;
       if(total1 != 0){
-        $('div#output-1').hide();
-        $('div#output-2').show();
+        document.getElementById('flip-card').classList.toggle('do-flip');
         total1 = 0;
         $('div#total-1').text(0);
         $("div#score-1").text('');
@@ -72,10 +68,10 @@ $(document).ready(function(){
       console.log(player1)
   });
   $('button#hold-2').on('click', function(){
+    
     player2.totalBank += total2;
     if(total2 != 0){
-      $('div#output-2').hide();
-      $('div#output-1').show();
+      document.getElementById('flip-card').classList.toggle('do-flip');
       total2 = 0;
       $('div#total-2').text(0);
       $('div#score-2').text('');

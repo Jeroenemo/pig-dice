@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pig Dice</title>
-  </head>
-  <body>
-    <div class='container'>
-      <h1 class="text-center">Pig Dice Game</h1>
-      <div class="row win-hide">
-        <div class="col-md-4 offset-md-4">
-          <p class="text-center">Welcome to our game! This is a game of pig dice, press the button to roll the dice</p>
-        </div>
-      </div>
-      <div class="row win-hide">
-        
-        <div id="output-1">
-          <button type="button" class="btn btn-info" id="roll-1">Player 1 Roll!</button>
-          <button type="button" class="btn btn-success" id="hold-1">Hold!</button>
-          <div id="total-1"></div>
-          <div id="score-1">
-  
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pig Dice</title>
+</head>
+<body>
+  <div class='container'>
+    <h1 class="text-center">Pig Dice Game</h1>
+    <div class="win-hide">
+      <p class="text-center">Welcome to our game! This is a game of pig dice, press the button to roll the dice</p>
+    </div>
+    <div class="win-hide">
+      <div id="flip-card">
+        <div class="flip-card-front">
+          <div id="output-1">
+            <button type="button" class="btn btn-info" id="roll-1">Player 1 Roll!</button>
+            <button type="button" class="btn btn-success" id="hold-1">Hold!</button>
+            <div id="total-1"></div>
+            <div id="score-1"></div>
           </div>
         </div>
-        <div id="output-2">
-          <button type="button" class="btn btn-info" id="roll-2">Player 2 Roll!</button>
-          <button type="button" class="btn btn-success" id="hold-2">Hold!</button>
-          <div id="total-2"></div>
-          <div id="score-2">
-  
+        <div class="flip-card-back">
+          <div id="output-2">
+            <button type="button" class="btn btn-info" id="roll-2">Player 2 Roll!</button>
+            <button type="button" class="btn btn-success" id="hold-2">Hold!</button>
+            <div id="total-2"></div>
+            <div id="score-2"></div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div id="winner-output">
-
         </div>
       </div>
     </div>
-  </body>
+    <div class="row">
+      <div id="winner-output"></div>
+    </div>
+  </div>
+</body>
 </html>
