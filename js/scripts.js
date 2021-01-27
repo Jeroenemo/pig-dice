@@ -13,7 +13,12 @@ Dice.prototype.rollDice = function() {
 //   return Math.floor(Math.random() * (max - min + 1)) + min;
 // }
 
+function Player(name){
+  this.name = name;
+  this.turnScore = 0;
+  this.totalBank = 0;
 
+}
 
 
 
