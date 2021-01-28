@@ -7,9 +7,17 @@
 /* .audio {
   display: none;
 } */
-
+#score-1, #score-2 {
+  margin-top: 10px;
+}
 #reload-btn {
-  margin-left: 33%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#play-button {
+  margin-top: 20px;
+  margin-left: 45%;
 }
 
 body {
@@ -20,6 +28,10 @@ body {
   margin-top: 10%;
   margin-left: 15%;
   background-color: #9DA0AC;
+}
+
+.hide-all {
+  display: none;
 }
 
 
