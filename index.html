@@ -11,51 +11,57 @@
   <title>Pig Dice</title>
 </head>
 <body>
+  <!-- <img src="img/dice-1.png" id="dice-1">
+  <img src="img/dice-2.png" id="dice-2" class="big-dice">
+  <img src="img/dice-3.png" id="dice-3">
+  <img src="img/dice-4.png" id="dice-4">
+  <img src="img/dice-5.png" id="dice-5" class="big-dice">
+  <img src="img/dice-6.png" id="dice-6" class="big-dice"> -->
+
   <audio controls autoplay id="audio" loop="true">
-    <source src="audio/Marble Zone Remix.mp3" type="audio/mpeg">
+    <source src="audio/Marble Zone Remix.mp3" type="audio/mp3">
     Your browser does not support the audio tag.
   </audio>
   <div class='container'>
     <h1 class="text-center">Pig Dice Game</h1>
     <div class="hide-all">
-      <div class="win-hide">
+      <div class="hide-when-win"> 
         <p class="text-center">Welcome to our game! This is a game of pig dice, press the button to roll the dice</p>
       </div>
     </div>
-    <div class="win-hide">
+    <div class="hide-when-win"> 
       <div class="row" id="bank-divs">
         <div class="col-md-4 offset-md-2">
           <div id="bank-1">
-            <p class="hide-all"><span id="player1-name">Player 1</span> bank: <span id="bank-output-1">0</span></p>
+            <p class="hide-all"><span class="player-1-name">Player 1</span>'s bank: <span id="bank-output-1">0</span></p>
           </div>
         </div>
         <div class="col-md-4">
           <div id="bank-2">
-            <p class="hide-all"><span id="player2-name">Player 2</span> bank: <span id="bank-output-2">0</span></p>
+            <p id="second-p" class="hide-all"><span class="player-2-name">Player 2</span>'s bank: <span id="bank-output-2">0</span></p>
           </div>
         </div>
       </div>
       <form>
-        <label for="player1">Player 1: </label>
-        <input type="text" class="form-control" id="player1">
-        <label for="player2">Player 2: </label>
-        <input type="text" class="form-control" id="player2"> 
+        <label for="player-1">Player 1: </label>
+        <input type="text" class="form-control" id="player-1">
+        <label for="player-2">Player 2: </label>
+        <input type="text" class="form-control" id="player-2"> 
         <button type="submit" class="btn btn-primary" id="play-button">Play!</button>
       </form>
       <div id="flip-card" class="hide-all">
         <div class="flip-card-front">
           <div id="output-1">
-            <div id="total-1"></div>
-            <button type="button" class="btn btn-info" id="roll-1"><span id="player1-roll">Player 1</span> Roll!</button>
+            <div id="total-1" class="empty-total"></div>
+            <button type="button" class="btn btn-info" id="roll-1"><span class="player-1-name">Player 1</span> Roll!</button>
             <button type="button" class="btn btn-success" id="hold-1">Hold!</button>
-            
             <div id="score-1"></div>
           </div>
         </div>
         <div class="flip-card-back">
           <div id="output-2">
-            <div id="total-2"></div>
-            <button type="button" class="btn btn-info" id="roll-2"><span id="player2-roll">Player 2</span> Roll!</button>
+            <div id="total-2" class="empty-total"></div>
+            <button type="button" class="btn btn-info" id="roll-2"><span class="player-2-name">Player 2</span> Roll!</button>
             <button type="button" class="btn btn-success" id="hold-2">Hold!</button>
             <div id="score-2"></div>
           </div>
@@ -64,11 +70,11 @@
     </div>
     <div class="row">
       <div class="col-md-5 offset-md-3">
-        <div class="card" id="card-hide">
+        <div class="card" id="hidden-win-card">
           <div class="card-title">
             <div class="card-body">
               <div id="winner-output">
-                <button type='button' class='btn btn-primary' id='reload-btn'>Play again!</button>
+                <button type='button' class='btn btn-primary' id='replay-button'>Play again!</button>
               </div>
             </div>
           </div>
