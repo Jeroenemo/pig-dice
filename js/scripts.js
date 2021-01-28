@@ -3,6 +3,7 @@
 function Dice(roll) {
   this.roll = roll
 };
+
 Dice.prototype.rollDice = function() {
   return Math.floor(Math.random() * (Math.floor(6) - Math.ceil(1) + 1)) + 1;
 };
@@ -14,7 +15,6 @@ function Player(name){
 };
 
 Player.prototype.checkWinner = function(){
-  console.log(this.totalBank);
   if(this.totalBank >= 100){
     console.log("This is working");
     $('div.win-hide').hide();
@@ -68,7 +68,6 @@ $(document).ready(function(){
         $("div#score-1").text('');
       }
       player1.checkWinner();
-      console.log(player1)
   });
   $('button#hold-2').on('click', function(){
     player2.totalBank += total2;
@@ -80,7 +79,6 @@ $(document).ready(function(){
       $('div#score-2').text('');
     }
     player2.checkWinner();
-    console.log(player2)
   });
   $('button#reload-btn').on('click', function(){
     console.log('This button has been clicked')

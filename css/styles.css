@@ -5,6 +5,9 @@
 #reload-btn {
   margin-left: 33%;
 }
+body {
+  margin-top: 50px;
+}
 
 .card {
   margin-top: 10%;
