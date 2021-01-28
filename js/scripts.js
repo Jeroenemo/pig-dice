@@ -24,6 +24,7 @@ Player.prototype.checkWinner = function(){
 
 // UI Logic
 $(document).ready(function(){
+  document.getElementById('audio').volume = 0.2;
   let newDice = new Dice();
   let total1 = 0;
   let total2 = 0;
@@ -105,6 +106,6 @@ $(document).ready(function(){
     $('div#card-hide').hide();
     $('p#remove-p').remove();
   });
-  document.getElementById('audio').volume = 0.2;
+  
   });
 });
