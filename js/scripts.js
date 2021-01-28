@@ -106,6 +106,6 @@ $(document).ready(function(){
     $('div#card-hide').hide();
     $('p#remove-p').remove();
   });
-  
+ 
   });
 });
