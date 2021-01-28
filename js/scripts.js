@@ -18,7 +18,8 @@ Player.prototype.checkWinner = function(){
   if(this.totalBank >= 100){
     console.log("This is working");
     $('div.win-hide').hide();
-    $('div#winner-output').text("Congratulations! You have won the game! Reload the page to play again")
+    $('div#card-hide').show();
+    $('div#winner-output').prepend("<p class='text-center'>Congratulations! You have won the game! Reload the page to play again</p>")
   }
 }
 
@@ -80,6 +81,10 @@ $(document).ready(function(){
     }
     player2.checkWinner();
     console.log(player2)
+  });
+  $('button#reload-btn').on('click', function(){
+    console.log('This button has been clicked')
+    location.reload();
   });
 });
 
