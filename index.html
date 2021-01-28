@@ -11,15 +11,19 @@
   <title>Pig Dice</title>
 </head>
 <body>
+  <!-- <audio controls autoplay="true" id="audio" loop="true">
+    <source src="/audio/Marble Zone Remix.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio> -->
   <div class='container'>
     <h1 class="text-center">Pig Dice Game</h1>
-
     <div class="win-hide">
       <p class="text-center">Welcome to our game! This is a game of pig dice, press the button to roll the dice</p>
     </div>
+
     <div class="win-hide">
-      <div class="row">
-        <div class="col-md-4 offset-md-3">
+      <div class="row" id="bank-divs">
+        <div class="col-md-4 offset-md-2">
           <div id="bank-1">
             <p>Player 1 bank: <span id="bank-output-1">0</span></p>
           </div>
@@ -56,7 +60,7 @@
           <div class="card-title">
             <div class="card-body">
               <div id="winner-output">
-                <button type='button' class='btn btn-primary' id='reload-btn'>Reload!</button>
+                <button type='button' class='btn btn-primary' id='reload-btn'>Play again!</button>
               </div>
             </div>
           </div>

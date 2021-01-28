@@ -84,6 +84,7 @@ $(document).ready(function(){
     console.log('This button has been clicked')
     location.reload();
   });
+  document.getElementById('audio').volume = 0.2;
 });
 
 
